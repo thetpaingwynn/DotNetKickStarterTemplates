@@ -1,0 +1,12 @@
+{
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.vstemplate": "xml",
+    "template.json": "jsonc"
+  },
+  "files.exclude": {
+    "**/bin": true,
+    "**/obj": true,
+    "**/.vs": true
+  }
+}

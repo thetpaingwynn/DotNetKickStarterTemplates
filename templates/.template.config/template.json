@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Thet Paing Wynn",
+  "classifications": ["KickStarter", "Project"],
+  "name": "Kick Starter Project",
+  "identity": "DotNet.KickStarter",
+  "shortName": "ksproject",
+  "tags": {
+    "language": "C#"
+  },
+  "sourceName": "KickStarter",
+  "preferNameDirectory": true,
+  "guids": [
+    "{CC38CA57-2CC5-4F01-8A96-DE14233AE9C9}", // KickStarter.DependencyInjection
+    "{77B24BB3-56C5-4DFC-9928-20CD9C97C766}", // KickStarter.Hosting
+    "{650A8E9F-2849-4420-93B9-A1051D5CA1CF}" // KickStarter.ConsoleApp
+  ],
+  "primaryOutputs": [
+    {
+      "path": "src\\KickStarter.DependencyInjection\\KickStarter.DependencyInjection.csproj"
+    },
+    {
+      "path": "src\\KickStarter.Hosting\\KickStarter.Hosting.csproj"
+    },
+    {
+      "path": "src\\KickStarter.Redis\\KickStarter.Redis.csproj"
+    },
+    {
+      "path": "src\\KickStarter.ConsoleApp\\KickStarter.ConsoleApp.csproj"
+    }
+  ],
+  "symbols": {
+    "empty": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false"
+    }
+  },
+  "sources": [
+    {
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        "**/.template.config/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json",
+        "**/.vscode/**",
+        "**/.vs/**",
+        "**/.git/**",
+        "**/Build/**",
+        "**/.DS_Store/**"
+      ],
+      "modifiers": [
+        {
+          "condition": "(empty)",
+          "exclude": [
+            "**/[Bb]in/**",
+            "**/[Oo]bj/**",
+            "**/.template.config/**/*",
+            "**/*.filelist",
+            "**/*.user",
+            "**/*.lock.json",
+            "**/.vscode/**",
+            "**/.vs/**",
+            "**/.git/**",
+            "**/Build/**",
+            "**/.DS_Store/**",
+            "test/**",
+            "src/**",
+            "Build_*"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Thet Paing Wynn",
+  "classifications": ["KickStarter", "Library"],
+  "name": "Kick Starter Hosting Extensions",
+  "identity": "DotNet.KickStarter.Hosting",
+  "shortName": "kshost",
+  "tags": {
+    "language": "C#"
+  },
+  "sourceName": "KickStarter.Hosting",
+  "preferNameDirectory": true,
+  "primaryOutputs": [
+    {
+      "path": "KickStarter.Hosting.csproj"
+    }
+  ],
+  "sources": [
+    {
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        "**/.template.config/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json",
+        "**/.vscode/**",
+        "**/.vs/**",
+        "**/.git/**",
+        "**/.DS_Store/**"
+      ]
+    }
+  ],
+  "symbols": {
+    "replaceRootNamespace": {
+      "type": "generated",
+      "generator": "regex",
+      "dataType": "string",
+      "replaces": "KickStarter.",
+      "parameters": {
+        "source": "name",
+        "action": "replace",
+        "steps": [
+          {
+            "regex": "[^\\.]*$",
+            "replacement": ""
+          }
+        ]
+      }
+    }
+  }
+}

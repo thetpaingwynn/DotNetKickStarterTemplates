@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageId>DotNet.KickStarter.Templates</PackageId>
+    <Title>KickStarter Templates</Title>
+    <Authors>Thet Paing Wynn</Authors>
+    <Description>KickStarter Project Templates</Description>
+    <PackageTags>dotnet-new;templates</PackageTags>
+
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1</TargetFrameworks>
+
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vs\**;templates\**\.vscode\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>
